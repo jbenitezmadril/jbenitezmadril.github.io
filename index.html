@@ -1,4 +1,13 @@
+<!--
+    Credit:
+    The majority of this code was attained by the instagram user: luisdanielroviracontreras.
+    Please consider following his account, great content.
 
+    Bugs: 
+    1. Issues with child 3, func"contents.addEventListener"
+    2. Chrome does not change button unless you double click
+
+-->
 <!DOCTYPE html>
 <html lang="en">
     
@@ -8,7 +17,7 @@
     <title>Important Links</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="manifest" href="manifest.json">
+    <!--link rel="manifest" href="manifest.json"-->
 </head>
 
 <body>
@@ -22,35 +31,31 @@
                     @one_daniel_
                 </h1>
                 <p>
-                    I would appreciate it if you could donate <br> 
-                    to some of the following none-profits. Thank You. 
+                    Consider donating to some of the<br> 
+                    following none-profits. Thank You. 
                 </p>
             </div>
         </div>
         <div class="con-menu">
             <button onclick="handleClick(event, 'con-links')" class="active">
-                Links
+                <!--Links-->
+                Donations
             </button>
             <button onclick="handleClick(event, 'con-posts')">
-                Posts
+                <!--Posts-->
+                Personal
             </button>
         </div>
         <div class="con-contents">
             <div class="con-links">
-                <!--a target="_blank" href="https://www.instagram.com/one_daniel_/">
-                    <i class='bx bxl-instagram-alt'></i>
-                    <span>
-                        Instagram
-                    </span>
-                </a-->
                 <a target="_blank" href="https://donate.torproject.org/">
-                    <i class='bx bxl-codepen' ></i>
+                    <i class='bx bx-shape-polygon' ></i>
                     <span>
                         Tor
                     </span>
                 </a>
                 <a target="_blank" href="https://www.montereybayaquarium.org/join-give/ways-to-give/give">
-                    <img src="/vuesax.png" alt="">
+                    <i class='bx bx-water' ></i>
                     <span>
                         Monterey Bay Aquarium
                     </span>
@@ -98,6 +103,7 @@
             </div>
 
             <div class="con-posts">
+                <!-- 
                 <a class="post" target="_blank" href="https://www.instagram.com/p/CECec3CidsL/">
                     <div class="con-file">
                         <video autoplay loop src="guide.mp4"></video>
@@ -268,6 +274,29 @@
 
                     <div class="effect"></div>
                 </a>
+                -->
+                <div class="con-links">
+                    <a target="_blank" href="https://www.instagram.com/one_daniel_/">
+                        <i class='bx bxl-instagram-alt'></i>
+                        <span>
+                            Instagram
+                        </span>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/one_danie1">
+                        <i class='bx bxl-twitter' ></i>
+                        <span>
+                            Twitter
+                        </span>
+                    </a>
+                    <a target="_blank" href="https://geekprank.com/fake-dos/">
+                        <i class='bx bxl-github'></i>
+                        <span>
+                            Github
+                        </span>
+                    </a>
+                
+                    
+                </div>
             </div>
         </div>
     </div>
@@ -307,13 +336,13 @@
         if (evt.target.scrollLeft > window.innerWidth / 2 && evt.target.scrollLeft < window.innerWidth + (window.innerWidth / 2)) {
             menu.querySelector('button:nth-child(1)').classList.remove('active')
             menu.querySelector('button:nth-child(2)').classList.add('active')
-            menu.querySelector('button:nth-child(3)').classList.remove('active')
+            menu.querySelector('button:nth-child(3)').classList.remove('active')    //issue with child 3
         } else if (evt.target.scrollLeft < window.innerWidth / 2) {
             menu.querySelector('button:nth-child(1)').classList.add('active')
             menu.querySelector('button:nth-child(2)').classList.remove('active')
             menu.querySelector('button:nth-child(3)').classList.remove('active')
         } else if (evt.target.scrollLeft > window.innerWidth + (window.innerWidth / 2)) {
-            menu.querySelector('button:nth-child(2)').classList.remove('active')
+            menu.querySelector('button:nth-child(2)').classList.remove('active')    //issue with child 3
             menu.querySelector('button:nth-child(3)').classList.add('active')
         }
     })
