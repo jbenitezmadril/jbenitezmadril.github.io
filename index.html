@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Important Links</title>
+    <title>Links</title>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
@@ -21,8 +21,8 @@
                     @one_daniel_
                 </h1>
                 <p>
-                    Consider donating to some of the<br> 
-                    following none-profits. Thank You. 
+                    Consider donating to some of the<br>
+                    following none-profits. Thank You.
                 </p>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <button onclick="handleClick(event, 'con-links')" class="active">
                 Donations
             </button>
-            <button onclick="handleClick(event, 'con-posts')">
+            <button onclick="handleClick(event, 'con-p_links')">
                 Personal
             </button>
         </div>
@@ -54,10 +54,10 @@
                     <span>
                         Monterey Bay Aquarium
                     </span>
-                </a>                
+                </a>
             </div>
 
-            <div class="con-posts">
+            <div class="con-p_links">
 
                 <div class="con-links">
                     <a target="_blank" href="https://www.instagram.com/one_daniel_/">
@@ -78,8 +78,8 @@
                             Github
                         </span>
                     </a>
-                
-                    
+
+
                 </div>
             </div>
         </div>
@@ -91,7 +91,7 @@
     const menu = document.querySelector('.con-menu')
     const contents = document.querySelector('.con-contents')
     const links = document.querySelector('.con-contents .con-links')
-    const posts = document.querySelector('.con-contents .con-posts')
+    const p_links = document.querySelector('.con-contents .con-p_links')
     window.addEventListener("load", function(event) {
         const vh = window.innerHeight * 0.01
         document.documentElement.style.setProperty('--vh', `${vh}px`)
@@ -102,7 +102,7 @@
         const h = window.innerHeight - menu.clientHeight - user.clientHeight
         contents.style.height = `${h}px`
         links.style.height = `${h}px`
-        posts.style.height = `${h}px`
+        p_links.style.height = `${h}px`
     })
 
     function handleClick(evt, name) {
@@ -120,7 +120,7 @@
         if (evt.target.scrollLeft > window.innerWidth / 2 && evt.target.scrollLeft < window.innerWidth + (window.innerWidth / 2)) {
             menu.querySelector('button:nth-child(1)').classList.remove('active')
             menu.querySelector('button:nth-child(2)').classList.add('active')
-            menu.querySelector('button:nth-child(3)').classList.remove('active')    //issue with child 3 
+            menu.querySelector('button:nth-child(3)').classList.remove('active')    //issue with child 3
         } else if (evt.target.scrollLeft < window.innerWidth / 2) {
             menu.querySelector('button:nth-child(1)').classList.add('active')
             menu.querySelector('button:nth-child(2)').classList.remove('active')
@@ -238,14 +238,14 @@
         position: relative;
         max-width: 500px;
     }
-    .con-posts {
+    .con-p_links {
         min-width: 100%;
         scroll-snap-align: center;
         overflow: auto;
         padding-bottom: 30px;
         max-width: 500px;
     }
-    .con-posts .post {
+    .con-p_links .post {
         width: calc(100% - 40px);
         overflow: hidden;
         box-sizing: border-box;
@@ -263,36 +263,36 @@
         padding-bottom: 100%;
         height: 0;
     }
-    .con-posts .post img {
+    .con-p_links .post img {
         width: 100%;
         position: absolute;
         top: 50%;
         left: 0px;
         transform: translate(0,-50%);
     }
-    .con-posts .post video {
+    .con-p_links .post video {
         width: 100%;
         position: absolute;
         top: 50%;
         left: 0px;
         transform: translate(0,-50%);
     }
-    .con-posts .post footer {
+    .con-p_links .post footer {
         position: absolute;
         bottom: 0px;
         z-index: 10;
         padding: 10px 20px;
     }
-    .con-posts .post footer h3 {
+    .con-p_links .post footer h3 {
         display: flex;
         align-items: center;
         justify-content: flex-start;
     }
-    .con-posts .post footer h3 i {
+    .con-p_links .post footer h3 i {
         margin-right: 5px;
         font-size: 1.4rem;
     }
-    .con-posts .post .effect {
+    .con-p_links .post .effect {
         position: absolute;
         bottom: 0px;
         height: 150px;
