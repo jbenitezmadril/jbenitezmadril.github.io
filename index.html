@@ -26,7 +26,24 @@
                 </p>
             </div>
         </div>
+        <div class="con-stories">
 
+            <div class="title">
+                <h1>
+                    IG Story Links
+                </h1>
+                <p>
+                    09/13/2020
+                </p>
+
+                <a target="_blank" href="https://www.youtube.com/watch?v=3tR6mKcBbT4&t=123s">
+                    <i class='bx bxl-youtube'></i>
+                    <span>
+                        youtube
+                    </span>
+                </a>
+            </div>
+        </div>
         <div class="con-menu">
             <button onclick="handleClick(event, 'con-links')" class="active">
                 Donations
@@ -194,6 +211,19 @@
         border-radius: 30px;
     }
     .con-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        max-width: 500px;
+        margin: auto;
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        box-shadow: 0px 15px 20px -5px rgba(160, 160, 160, 0.08);
+        border-radius: 0px 0px 30px 30px;
+    }
+    .con-stories {
         display: flex;
         align-items: center;
         justify-content: space-between;
